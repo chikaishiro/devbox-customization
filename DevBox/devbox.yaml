@@ -3,14 +3,5 @@ image: microsoftwindowsdesktop_windows-ent-cpc_win11-22h2-ent-cpc-m365@1.0.0
 hostInformation: general_i_8c32gb256ssd_v2
 supportsHibernation: false
 setupTasks:
-  - task: chocolatey
-  - task: install-package
-    inputs:
-      package: git.install
-  - task: install-package
-    inputs:
-      package: vscode
-  - task: write-text
-    inputs:
-      boolParam: false
-      stringParam: hello devbox
+  - task: local-written-signed
+  - task: local-written-unsigned
