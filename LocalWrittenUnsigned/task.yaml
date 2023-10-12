@@ -1,2 +1,2 @@
-name: local-written-signed
+name: local-written-unsigned
 command: .\LocalWritten.ps1
