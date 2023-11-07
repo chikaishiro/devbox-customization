@@ -1,0 +1,2 @@
+name: execute-signed-script
+command: .\Signed-Script.ps1
