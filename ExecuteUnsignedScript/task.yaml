@@ -1,0 +1,2 @@
+name: execute-unsigned-script
+command: .\Unsigned-Script.ps1
