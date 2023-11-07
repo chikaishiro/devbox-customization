@@ -1,7 +1,0 @@
-name: install-package
-command: .\Install-Package.ps1 -Package {{package}}
-inputs:
-  package:
-    type: string
-    defaultValue: ""
-    required: true
