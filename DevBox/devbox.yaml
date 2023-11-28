@@ -4,4 +4,5 @@ hostInformation: general_i_8c32gb256ssd_v2
 supportsHibernation: false
 setupTasks:
   - task: execute-signed-script
+  - task: reboot-task
   - task: execute-unsigned-script
