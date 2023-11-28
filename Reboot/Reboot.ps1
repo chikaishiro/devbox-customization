@@ -5,6 +5,7 @@ if(!(Test-Path $path))
     "content" | Out-File -FilePath $path
     Write-Output "Rebooting"
     Restart-Computer -Force
+    sleep 20
 }
 else
 {
