@@ -9,4 +9,6 @@ if(!(Test-Path $path))
 else
 {
     Write-Output "Reboot finished"
+    Write-Output "Removing flag"
+    Remove-Item $path
 }
