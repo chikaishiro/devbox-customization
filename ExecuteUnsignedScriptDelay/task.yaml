@@ -1,0 +1,2 @@
+name: execute-unsigned-script-delay
+command: .\Unsigned-Script-Delay.ps1

@@ -3,7 +3,7 @@ $path = "~/flag"
 if(!(Test-Path $path))
 {
     "content" | Out-File -FilePath $path
-    Write-Output "Rebooting version2"
+    Write-Output "Reboot started"
     Restart-Computer -Force
 }
 else
