@@ -5,4 +5,6 @@ supportsHibernation: false
 setupTasks:
   - task: execute-signed-script
   - task: reboot-task
+  - task: reboot-task-delay
   - task: execute-unsigned-script
+  - task: execute-unsigned-script-delay
