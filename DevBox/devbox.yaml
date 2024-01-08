@@ -6,4 +6,3 @@ setupTasks:
   - task: execute-signed-script
   - task: reboot-task
   - task: execute-unsigned-script
-  - task: execute-unsigned-script-delay
