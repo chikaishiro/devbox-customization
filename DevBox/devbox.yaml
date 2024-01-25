@@ -1,5 +1,5 @@
 name: devbox-customization
-image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2@1.0.0
+image: microsoftvisualstudio_windowsplustools_base-win11-gen2@1.0.0
 hostInformation: general_i_8c32gb256ssd_v2
 supportsHibernation: false
 setupTasks:
