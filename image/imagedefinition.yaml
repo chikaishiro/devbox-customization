@@ -16,6 +16,7 @@ tasks:
   - name: ~/powershell
     parameters:
       command: >-
+        $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine');
         for ($i=1; $i -le 3; $i++) {
           choco install bruno -y --no-progress --limitoutput --ignore-checksums --execution-timeout=3600;
           if ($LASTEXITCODE -eq 0) { break };
@@ -27,6 +28,7 @@ tasks:
   - name: ~/powershell
     parameters:
       command: >-
+        $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine');
         for ($i=1; $i -le 3; $i++) {
           choco install docker-desktop -y --no-progress --limitoutput --ignore-checksums --execution-timeout=3600;
           if ($LASTEXITCODE -eq 0) { break };
@@ -38,6 +40,7 @@ tasks:
   - name: ~/powershell
     parameters:
       command: >-
+        $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine');
         for ($i=1; $i -le 3; $i++) {
           choco install azure-cli -y --no-progress --limitoutput --ignore-checksums --execution-timeout=3600;
           if ($LASTEXITCODE -eq 0) { break };
