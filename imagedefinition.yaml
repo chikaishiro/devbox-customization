@@ -1,0 +1,16 @@
+$schema: 1.0
+name: image-definition-sample
+image: microsoftwindowsdesktop_windows-ent-cpc_win11-21h2-ent-cpc-m365
+tasks:
+  - name: ~/powershell
+    parameters:
+      command: "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')); $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine')"
+  - name: ~/powershell
+    parameters:
+      command: "for ($i=1; $i -le 3; $i++) { choco install bruno -y --no-progress --limitoutput --ignore-checksums --execution-timeout=3600; if ($LASTEXITCODE -eq 0) { break }; Start-Sleep -Seconds 30 }"
+  - name: ~/powershell
+    parameters:
+      command: "for ($i=1; $i -le 3; $i++) { choco install docker-desktop -y --no-progress --limitoutput --ignore-checksums --execution-timeout=3600; if ($LASTEXITCODE -eq 0) { break }; Start-Sleep -Seconds 30 }"
+  - name: ~/powershell
+    parameters:
+      command: "for ($i=1; $i -le 3; $i++) { choco install azure-cli -y --no-progress --limitoutput --ignore-checksums --execution-timeout=3600; if ($LASTEXITCODE -eq 0) { break }; Start-Sleep -Seconds 30 }"
