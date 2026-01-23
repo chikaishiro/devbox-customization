@@ -47,3 +47,8 @@ tasks:
           Start-Sleep -Seconds 30
         };
         if ($LASTEXITCODE -ne 0) { exit 1 }
+
+  - name: ~/powershell
+    parameters:
+      command: "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine'); for ($i=1; $i -le 3; $i++) { choco install powershell-core -y --no-progress --limitoutput --ignore-checksums --execution-timeout=3600; if ($LASTEXITCODE -eq 0) { break }; Start-Sleep -Seconds 30 }; if ($LASTEXITCODE -ne 0) { exit 1 }"
+
